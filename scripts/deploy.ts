@@ -2,7 +2,7 @@ import { ethers } from "hardhat";
 
 async function main() {
   const MyToken = await ethers.getContractFactory("MyToken");
-  const myToken = await MyToken.deploy(500);
+  const myToken = await MyToken.deploy(ethers.utils.parseEther('1000.0'));
   await myToken.deployed();
 
 
